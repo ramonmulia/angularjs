@@ -4,12 +4,17 @@
 	<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
 	<script type="text/javascript" src="../bower_components/angular-animate/angular-animate.js"></script>
 	<script type="text/javascript" src="../bower_components/angular-aria/angular-aria.js"></script>
-	<script type="text/javascript" src="../apbower_components/angular-resource/angular-resource.js"></script>
+	<script type="text/javascript" src="../bower_components/angular-resource/angular-resource.js"></script>
+	<script type="text/javascript" src="../bower_components/angular-mocks/angular-mocks.js"></script>
+
 	<script type="text/javascript" src="../app/app.js"></script>
 	<script type="text/javascript" src="../app/product/productCtrl.js"></script>
+	<script type="text/javascript" src="../common/services/common.services.js"></script>
+	<script type="text/javascript" src="../common/services/productResource.js"></script>
+	<script type="text/javascript" src="../common/services/productResourceMock.js"></script>
 </head>
 <body ng-app="ProductManagement">
-<table ng-controller='ProductCtrl as vm'>
+<table ng-controller="ProductCtrl as vm">
 	<thead>
 		<tr>
 			<td>Id</td>
