@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Angular js</title>
+	<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="../bower_components/angular-animate/angular-animate.js"></script>
+	<script type="text/javascript" src="../bower_components/angular-aria/angular-aria.js"></script>
+	<script type="text/javascript" src="../apbower_components/angular-resource/angular-resource.js"></script>
+	<script type="text/javascript" src="../app/app.js"></script>
+	<script type="text/javascript" src="../app/product/productCtrl.js"></script>
+</head>
+<body ng-app="ProductManagement">
+<table ng-controller='ProductCtrl as vm'>
+	<thead>
+		<tr>
+			<td>Id</td>
+			<td>Name</td>
+			<td>
+				<button ng-click="vm.toogleImage()">
+					{{vm.showImage ? "Hide" : "Show"}} Image
+				</button>
+				
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="product in vm.products">
+			<td>{{product.productId}}</td>
+			<td>{{product.productName}}</td>
+			<td>
+				<img ng-src="{{product.productImage}}" ng-if="vm.showImage" width="60">
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
