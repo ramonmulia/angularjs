@@ -8,8 +8,6 @@
 				vm.products = data
 			});
 
-
-
 			vm.showImage = false;
 
 			vm.toogleImage = function() {

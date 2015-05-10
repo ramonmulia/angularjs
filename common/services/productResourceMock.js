@@ -13,8 +13,7 @@
 				"productId": 2,
 				"productName": "Sorvete",
 				"productImage": "http://www.didu.com.br/wp-content/uploads/2014/01/sorvete.jpg"
-			},
-			 {
+			}, {
 				"productId": 3,
 				"productName": "Cerveja",
 				"productImage": "http://aquiemsaqua.com.br/wp-content/uploads/2015/03/cerveja-gelada.jpg"
@@ -29,8 +28,30 @@
 			}];
 
 		var productUrl = "/api/products";
+		var editingRegex = new RegExp(productUrl + "/[0-9][0-9]*", "");
+
 
 		$httpBackend.whenGET(productUrl).respond(products);
 
+		$httpBackend.whenGET(editingRegex).respond(function(method, url, data) {
+			var product = {
+				"productId": 0
+			};
+			var parameters = url.split('/');
+			var length = parameters.length;
+			var id = parameters[length - 1];
+
+			if (id > 0) {
+				for (var i = 0; i < products.length; i++) {
+					if (products[i].productId == id) {
+						product = products[i];
+						break;
+					};
+				};
+			}
+			return [200, product, {}];
+		});
+
+		$httpBackend.whenGET(/app/).passThrough();
 	});
 }());
