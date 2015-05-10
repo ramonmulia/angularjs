@@ -1,2 +1,2 @@
-# angularjs
-Estudos Angularjs
+# AngularJS Line of Business Applications
+
