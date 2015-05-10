@@ -1,9 +1,19 @@
 <html>
 <head>
 	<title>Angular js</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../bower_components/angular-material/angular-material.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+<meta name="viewport" content="initial-scale=1" />
+
+
+
 	<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+
 	<script type="text/javascript" src="../bower_components/angular-animate/angular-animate.js"></script>
 	<script type="text/javascript" src="../bower_components/angular-aria/angular-aria.js"></script>
+	<script type="text/javascript" src="../bower_components/angular-material/angular-material.js"></script>
+
 	<script type="text/javascript" src="../bower_components/angular-resource/angular-resource.js"></script>
 	<script type="text/javascript" src="../bower_components/angular-mocks/angular-mocks.js"></script>
 
@@ -12,30 +22,22 @@
 	<script type="text/javascript" src="../common/services/common.services.js"></script>
 	<script type="text/javascript" src="../common/services/productResource.js"></script>
 	<script type="text/javascript" src="../common/services/productResourceMock.js"></script>
+
+
+
 </head>
 <body ng-app="ProductManagement">
-<table ng-controller="ProductCtrl as vm">
-	<thead>
-		<tr>
-			<td>Id</td>
-			<td>Name</td>
-			<td>
-				<button ng-click="vm.toogleImage()">
-					{{vm.showImage ? "Hide" : "Show"}} Image
-				</button>
-				
-			</td>
-		</tr>
-	</thead>
-	<tbody>
-		<tr ng-repeat="product in vm.products">
-			<td>{{product.productId}}</td>
-			<td>{{product.productName}}</td>
-			<td>
-				<img ng-src="{{product.productImage}}" ng-if="vm.showImage" width="60">
-			</td>
-		</tr>
-	</tbody>
-</table>
+
+<md-list ng-controller="ProductCtrl as vm" >
+ <md-button class="md-raised md-primary" ng-click="vm.toogleImage()">{{vm.showImage ? "Hide" : "Show"}} Image</md-button>
+ <md-subheader class="md-no-sticky">Comidas</md-subheader>
+
+	 <md-list-item ng-repeat="product in vm.products">
+		<p>{{product.productId}}</p>
+		<p>{{product.productName}}</p>
+		<img ng-src="{{product.productImage}}" ng-if="vm.showImage" width="60">
+	</md-list-item>
+</md-list>
+
 </body>
 </html>
