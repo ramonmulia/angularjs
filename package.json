@@ -1,0 +1,11 @@
+{
+  "name": "angularj",
+  "version": "1.0.0",
+  "description": "Estudos angular",
+  "author": "Ramon",
+  "dependencies": {
+    "body-parser": "^1.12.3",
+    "ejs": "^2.3.1",
+    "express": "^4.12.3"
+  }
+}
