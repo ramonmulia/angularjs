@@ -1,6 +1,6 @@
 (function() {
 	"use strict";
-	var app = angular.module("ProductManagement", ["common.services", "ui.router", "productResourceMock", "ngMaterial"]);
+	var app = angular.module("ProductManagement", ["common.services", "ui.router", "productResourceMock"]);
 
 	app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
 

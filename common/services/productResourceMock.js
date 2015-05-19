@@ -54,5 +54,6 @@
 
 		$httpBackend.whenGET(/app/).passThrough();
 		$httpBackend.whenGET(/img/).passThrough();
+		//$httpBackend.whenGET("views/welcomeView.html").passThrough();
 	});
 }());
