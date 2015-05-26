@@ -8,23 +8,38 @@
 			products = [{
 				"productId": 1,
 				"productName": "Queijo",
-				"productImage": "http://guiadoempreendedor.makro.com.br/wp-content/uploads/2013/04/makro_atacadista_como_conservar_servir_frios_sexta_2.jpg"
+				"imageUrl": "http://guiadoempreendedor.makro.com.br/wp-content/uploads/2013/04/makro_atacadista_como_conservar_servir_frios_sexta_2.jpg",
+				"productCode" : "GNDK - LJASNC",
+				"productDescription" : "Arroz",
+				"price" : 20
 			}, {
 				"productId": 2,
 				"productName": "Sorvete",
-				"productImage": "http://www.didu.com.br/wp-content/uploads/2014/01/sorvete.jpg"
+				"imageUrl": "http://www.didu.com.br/wp-content/uploads/2014/01/sorvete.jpg",
+				"productCode" : "GNDK - LJASNC",
+				"productDescription" : "Sorvetao",
+				"price" : 20.45
 			}, {
 				"productId": 3,
 				"productName": "Cerveja",
-				"productImage": "http://aquiemsaqua.com.br/wp-content/uploads/2015/03/cerveja-gelada.jpg"
+				"imageUrl": "http://aquiemsaqua.com.br/wp-content/uploads/2015/03/cerveja-gelada.jpg",
+				"productCode" : "GNDK - LJASNC",
+				"productDescription" : "bREJA GELADA",
+				"price" : 20.45
 			}, {
 				"productId": 4,
 				"productName": "Cachaça",
-				"productImage": "http://etilicos.com/wp-content/uploads/2014/02/cachaca-serie-a-casa-angelina-cambuci.jpg"
+				"imageUrl": "http://etilicos.com/wp-content/uploads/2014/02/cachaca-serie-a-casa-angelina-cambuci.jpg",
+				"productCode" : "GNDK - LJASNC",
+				"productDescription" : "Cachaça da boa",
+				"price" : 20.45
 			}, {
 				"productId": 5,
 				"productName": "Arroz",
-				"productImage": "http://temperaria.com.br/wp-content/uploads/2012/05/arrozbasmati_1.jpg"
+				"imageUrl": "http://temperaria.com.br/wp-content/uploads/2012/05/arrozbasmati_1.jpg",
+				"productCode" : "GNDK - LJASNC",
+				"productDescription" : "Arroz",
+				"price" : 20.45
 			}];
 
 		var productUrl = "/api/products";
@@ -54,6 +69,6 @@
 
 		$httpBackend.whenGET(/app/).passThrough();
 		$httpBackend.whenGET(/img/).passThrough();
-		//$httpBackend.whenGET("views/welcomeView.html").passThrough();
+		$httpBackend.whenGET(/views/).passThrough();
 	});
 }());

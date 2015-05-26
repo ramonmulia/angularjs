@@ -8,7 +8,7 @@
 
 		$stateProvider.state("home", {
 			url: "/",
-			templateUrl: "views/welcomeView.html"
+			templateUrl: "/views/welcomeView.html"
 		})
 
 		.state("productList", {
@@ -21,6 +21,24 @@
 			url: "/products/edit/:productId",
 			templateUrl: "/app/product/productEditView.html",
 			controller: "ProductEditCtrl as vm"
+		})
+
+		.state("productDetail", {
+			url: "/products/:productId",
+			templateUrl: "/app/product/productDetailView.html",
+			controller: "ProductDetailCtrl as vm",
+			resolve: {
+				productResource: "productResource",
+
+				product: function(productResource, $stateParams) {
+					var productId = $stateParams.productId;
+
+					return productResource.get({
+						productId: productId
+					}).$promise;
+				}
+
+			}
 		});
 	}]);
 }());
