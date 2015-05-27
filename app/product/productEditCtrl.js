@@ -1,17 +1,16 @@
 (function() {
 	angular
 		.module("ProductManagement")
-		.controller("ProductCtrl", ["productResource", function(productResource) {
+		.controller("ProductEditCtrl", ["product", function(product) {
 			var vm = this;
 
-			productResource.query(function(data) {
-				vm.products = data
-			});
+			vm.product = product;
 
-			vm.showImage = false;
-
-			vm.toogleImage = function() {
-				vm.showImage = !vm.showImage;
-			};
+			if(vm.product){
+				vm.title = "Edit: "+vm.product.productName; 
+			}
+			else{
+				vm.title = "New Product";
+			}
 		}]);
 })();
