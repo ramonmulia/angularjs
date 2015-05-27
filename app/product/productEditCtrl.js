@@ -6,7 +6,7 @@
 
 			vm.product = product;
 
-			if(vm.product){
+			if(vm.product.productName){
 				vm.title = "Edit: "+vm.product.productName; 
 			}
 			else{
