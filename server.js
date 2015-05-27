@@ -7,8 +7,6 @@ var port = process.env.PORT || 3000;
 app.engine('html', require('ejs').renderFile);
 app.set('views', __dirname + '/views');
 
-console.log(__dirname);
-
 app.use('/bower_components',express.static('bower_components'));
 app.use('/app',express.static('app'));
 app.use('/views',express.static('views'));
