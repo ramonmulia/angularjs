@@ -4,6 +4,8 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+
+	<link rel="stylesheet" type="text/css" href="../css/app.css">
 <meta name="viewport" content="initial-scale=1" />
 
     <script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
@@ -19,6 +21,7 @@
 	<script type="text/javascript" src="../common/services/productResourceMock.js"></script>
 	<script type="text/javascript" src="../app/product/productCtrl.js"></script>
 	<script type="text/javascript" src="../app/product/productDetailCtrl.js"></script>
+	<script type="text/javascript" src="../app/product/productEditCtrl.js"></script>
 
 
 
@@ -39,7 +42,7 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<li><a ui-sref="productList">Products List</a></li>
-					<li><a ui-sref="productEdit"><i class="glyphicon glyphicon-plus"></i>Add Product</a></li>
+					<li><a ui-sref="productEdit.info({productId:0})"><i class="glyphicon glyphicon-plus"></i>Add Product</a></li>
 				</ul>
 			</div>
 		</div>

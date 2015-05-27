@@ -13,6 +13,7 @@ app.use('/bower_components',express.static('bower_components'));
 app.use('/app',express.static('app'));
 app.use('/views',express.static('views'));
 app.use('/common',express.static('common'));
+app.use('/css',express.static('css'));
 
 app.get('/', function(req, res) {
 	res.render('index.html');
