@@ -1,7 +1,7 @@
 (function() {
 	angular
 		.module("ProductManagement")
-		.controller("ProductEditCtrl", ["product", function(product) {
+		.controller("ProductEditCtrl", ["product", "$state", function(product,$state) {
 			var vm = this;
 
 			vm.product = product;
@@ -12,5 +12,21 @@
 			else{
 				vm.title = "New Product";
 			}
+
+			vm.open = function($event){
+				$event.preventDefault();
+				$event.stopPropagation();
+
+				vm.opened = !vm.opened;
+			}
+
+			vm.cancel = function(){
+				$state.go('productList');
+			}
+
+			vm.submit = function(){
+				vm.product.$save();
+			}
+
 		}]);
 })();

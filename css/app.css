@@ -17,3 +17,11 @@ body{
 	background: #007acc;
 	color: #fff;
 }
+
+form{
+	background-color: #a4c8e8;
+	border-radius: 2px;
+	box-shadow: 0 1px 1px #ccc;
+	font-size: 16px;
+	padding: 30px 20px;
+}
