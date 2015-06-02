@@ -12,7 +12,8 @@
 				"productCode" : "GNDK - LJASNC",
 				"productDescription" : "Arroz",
 				"price" : 20,
-				"releaseDate" : new Date()
+				"releaseDate" : new Date(),
+				"tags" : ["papa","fezes"]
 			}, {
 				"productId": 2,
 				"productName": "Sorvete",
@@ -20,7 +21,8 @@
 				"productCode" : "GNDK - LJASNC",
 				"productDescription" : "Sorvetao",
 				"price" : 20.45,
-				"releaseDate" : new Date()
+				"releaseDate" : new Date(),
+				"tags" : []
 			}, {
 				"productId": 3,
 				"productName": "Cerveja",
@@ -28,7 +30,8 @@
 				"productCode" : "GNDK - LJASNC",
 				"productDescription" : "bREJA GELADA",
 				"price" : 20.45,
-				"releaseDate" : new Date()
+				"releaseDate" : new Date(),
+				"tags" : []
 			}, {
 				"productId": 4,
 				"productName": "Cachaça",
@@ -36,7 +39,8 @@
 				"productCode" : "GNDK - LJASNC",
 				"productDescription" : "Cachaça da boa",
 				"price" : 20.45,
-				"releaseDate" : new Date()
+				"releaseDate" : new Date(),
+				"tags" : []
 			}, {
 				"productId": 5,
 				"productName": "Arroz",
@@ -44,7 +48,8 @@
 				"productCode" : "GNDK - LJASNC",
 				"productDescription" : "Arroz",
 				"price" : 20.45,
-				"releaseDate" : new Date()
+				"releaseDate" : new Date(),
+				"tags" : []
 			}];
 
 		var productUrl = "/api/products";
@@ -74,7 +79,8 @@
 		$httpBackend.whenGET(editingRegex).respond(function(method, url, data) {
 			var product = {
 				"productId": 0,
-				"releaseDate" : new Date()
+				"releaseDate" : new Date(),
+				"tags" : ""
 			};
 			var parameters = url.split('/');
 			var length = parameters.length;
